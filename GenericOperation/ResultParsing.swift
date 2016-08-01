@@ -29,5 +29,5 @@ public protocol ResultParsing {
 
     var url: URL { get }
     var urlSession: URLSession { get }
-    
+
 }

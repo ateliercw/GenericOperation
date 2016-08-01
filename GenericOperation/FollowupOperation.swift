@@ -29,5 +29,5 @@ public class FollowUpOperation<ParentOperation: Operation>: AsynchronousOperatio
             followUpAction(parentOperation)
         }
     }
-    
+
 }

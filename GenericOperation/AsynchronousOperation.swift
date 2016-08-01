@@ -56,7 +56,8 @@ public class AsynchronousOperation: Operation {
     override public func start() {
         if self.isCancelled {
             state = .Finished
-        } else {
+        }
+        else {
             self.main() // This should set self.state = .Finished when done with execution
             state = .Executing
         }

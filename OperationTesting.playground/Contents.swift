@@ -70,4 +70,3 @@ let followUp = FollowUpOperation(parentOperation: imageOperation) { parent in
 
 OperationQueue.main.addOperation(imageOperation)
 OperationQueue.main.addOperation(followUp)
-

@@ -78,5 +78,5 @@ private extension DataSessionOperation {
             dataTask?.cancel()
         }
     }
-    
+
 }
