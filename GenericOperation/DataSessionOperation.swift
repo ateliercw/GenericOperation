@@ -69,7 +69,7 @@ public class DataSessionOperation<Query: ResultParsing>: AsynchronousOperation {
 
 private extension DataSessionOperation {
 
-    func taskCompletion(data: Data?, response: URLResponse?, error: NSError?) {
+    func taskCompletion(data: Data?, response: URLResponse?, error: Error?) {
         defer {
             state = .Finished
         }

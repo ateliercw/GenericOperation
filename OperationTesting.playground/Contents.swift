@@ -20,7 +20,7 @@ struct ImageRequest: ResultParsing {
         }
     }
 
-    enum Errors: ErrorProtocol {
+    enum Errors: Error {
         case noImage
     }
 

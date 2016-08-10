@@ -9,14 +9,14 @@
 import Foundation
 
 public enum Result<T> {
-    case error(ErrorProtocol)
+    case error(Error)
     case success(T)
 
     public var value: T? {
         switch self {
         case .error:
             return nil
-        case let success(value):
+        case let .success(value):
             return value
         }
     }
