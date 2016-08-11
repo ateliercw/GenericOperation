@@ -25,7 +25,7 @@ public class FollowUpOperation<ParentOperation: Operation>: AsynchronousOperatio
         defer {
             state = .Finished
         }
-        if !isCancelled {
+        if !isCancelled && !parentOperation.isCancelled {
             followUpAction(parentOperation)
         }
     }

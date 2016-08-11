@@ -20,6 +20,7 @@
 		729217A01D5BA51600325767 /* ImageLoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7292179F1D5BA51600325767 /* ImageLoaderViewController.swift */; };
 		729217A31D5BA5AE00325767 /* ModalDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729217A21D5BA5AE00325767 /* ModalDemoViewController.swift */; };
 		729217A61D5BA7FA00325767 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729217A51D5BA7FA00325767 /* UIButton+Extensions.swift */; };
+		729217A81D5CBFF200325767 /* ImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729217A71D5CBFF200325767 /* ImageRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +30,6 @@
 		723BC7381D4B7ACB001B585F /* DataSessionOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSessionOperation.swift; sourceTree = "<group>"; };
 		723BC73B1D4B7BB6001B585F /* AsynchronousOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsynchronousOperation.swift; sourceTree = "<group>"; };
 		723BC73D1D4B7D75001B585F /* ResultParsing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultParsing.swift; sourceTree = "<group>"; };
-		723BC73F1D4B83E3001B585F /* OperationTesting.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = OperationTesting.playground; sourceTree = "<group>"; };
 		723BC7411D4B896C001B585F /* FollowupOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowupOperation.swift; sourceTree = "<group>"; };
 		729217801D5B70F200325767 /* ModalPresentationOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalPresentationOperation.swift; sourceTree = "<group>"; };
 		729217861D5B7D2200325767 /* GenericOperationExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GenericOperationExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +41,7 @@
 		7292179F1D5BA51600325767 /* ImageLoaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoaderViewController.swift; sourceTree = "<group>"; };
 		729217A21D5BA5AE00325767 /* ModalDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalDemoViewController.swift; sourceTree = "<group>"; };
 		729217A51D5BA7FA00325767 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
+		729217A71D5CBFF200325767 /* ImageRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +68,6 @@
 				723BC72F1D4B7A96001B585F /* GenericOperation */,
 				729217871D5B7D2200325767 /* GenericOperationExample */,
 				723BC72E1D4B7A96001B585F /* Products */,
-				723BC73F1D4B83E3001B585F /* OperationTesting.playground */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				7292179F1D5BA51600325767 /* ImageLoaderViewController.swift */,
+				729217A71D5CBFF200325767 /* ImageRequest.swift */,
 			);
 			path = "Image Loader";
 			sourceTree = "<group>";
@@ -312,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7292178B1D5B7D2200325767 /* MainViewController.swift in Sources */,
+				729217A81D5CBFF200325767 /* ImageRequest.swift in Sources */,
 				729217A31D5BA5AE00325767 /* ModalDemoViewController.swift in Sources */,
 				729217891D5B7D2200325767 /* AppDelegate.swift in Sources */,
 				729217A61D5BA7FA00325767 /* UIButton+Extensions.swift in Sources */,
