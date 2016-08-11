@@ -21,6 +21,7 @@
 		729217A31D5BA5AE00325767 /* ModalDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729217A21D5BA5AE00325767 /* ModalDemoViewController.swift */; };
 		729217A61D5BA7FA00325767 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729217A51D5BA7FA00325767 /* UIButton+Extensions.swift */; };
 		729217A81D5CBFF200325767 /* ImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729217A71D5CBFF200325767 /* ImageRequest.swift */; };
+		729217AA1D5CEE2F00325767 /* ImageLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729217A91D5CEE2F00325767 /* ImageLoaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		729217A21D5BA5AE00325767 /* ModalDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalDemoViewController.swift; sourceTree = "<group>"; };
 		729217A51D5BA7FA00325767 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 		729217A71D5CBFF200325767 /* ImageRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageRequest.swift; sourceTree = "<group>"; };
+		729217A91D5CEE2F00325767 /* ImageLoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				7292179F1D5BA51600325767 /* ImageLoaderViewController.swift */,
+				729217A91D5CEE2F00325767 /* ImageLoaderView.swift */,
 				729217A71D5CBFF200325767 /* ImageRequest.swift */,
 			);
 			path = "Image Loader";
@@ -314,6 +317,7 @@
 			files = (
 				7292178B1D5B7D2200325767 /* MainViewController.swift in Sources */,
 				729217A81D5CBFF200325767 /* ImageRequest.swift in Sources */,
+				729217AA1D5CEE2F00325767 /* ImageLoaderView.swift in Sources */,
 				729217A31D5BA5AE00325767 /* ModalDemoViewController.swift in Sources */,
 				729217891D5B7D2200325767 /* AppDelegate.swift in Sources */,
 				729217A61D5BA7FA00325767 /* UIButton+Extensions.swift in Sources */,

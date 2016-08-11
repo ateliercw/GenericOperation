@@ -9,10 +9,12 @@
 import UIKit
 
 extension UIButton {
-    convenience init(title: String, target: NSObjectProtocol, action: Selector) {
+    convenience init(title: String, target: NSObjectProtocol? = nil, action: Selector? = nil) {
         self.init(type: .system)
         titleLabel?.font = UIFont.preferredFont(forTextStyle: UIFontTextStyleBody)
         setTitle(title, for: .normal)
-        addTarget(target, action: action, for: .touchUpInside)
+        if let target = target, let action = action {
+            addTarget(target, action: action, for: .touchUpInside)
+        }
     }
 }
