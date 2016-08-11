@@ -12,6 +12,14 @@
 		723BC73C1D4B7BB6001B585F /* AsynchronousOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723BC73B1D4B7BB6001B585F /* AsynchronousOperation.swift */; };
 		723BC73E1D4B7D75001B585F /* ResultParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723BC73D1D4B7D75001B585F /* ResultParsing.swift */; };
 		723BC7421D4B896C001B585F /* FollowupOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723BC7411D4B896C001B585F /* FollowupOperation.swift */; };
+		729217811D5B70F200325767 /* ModalPresentationOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729217801D5B70F200325767 /* ModalPresentationOperation.swift */; };
+		729217891D5B7D2200325767 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729217881D5B7D2200325767 /* AppDelegate.swift */; };
+		7292178B1D5B7D2200325767 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7292178A1D5B7D2200325767 /* MainViewController.swift */; };
+		729217901D5B7D2200325767 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7292178F1D5B7D2200325767 /* Assets.xcassets */; };
+		729217931D5B7D2200325767 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 729217911D5B7D2200325767 /* LaunchScreen.storyboard */; };
+		729217A01D5BA51600325767 /* ImageLoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7292179F1D5BA51600325767 /* ImageLoaderViewController.swift */; };
+		729217A31D5BA5AE00325767 /* ModalDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729217A21D5BA5AE00325767 /* ModalDemoViewController.swift */; };
+		729217A61D5BA7FA00325767 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729217A51D5BA7FA00325767 /* UIButton+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,10 +31,27 @@
 		723BC73D1D4B7D75001B585F /* ResultParsing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultParsing.swift; sourceTree = "<group>"; };
 		723BC73F1D4B83E3001B585F /* OperationTesting.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = OperationTesting.playground; sourceTree = "<group>"; };
 		723BC7411D4B896C001B585F /* FollowupOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowupOperation.swift; sourceTree = "<group>"; };
+		729217801D5B70F200325767 /* ModalPresentationOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalPresentationOperation.swift; sourceTree = "<group>"; };
+		729217861D5B7D2200325767 /* GenericOperationExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GenericOperationExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		729217881D5B7D2200325767 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7292178A1D5B7D2200325767 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		7292178F1D5B7D2200325767 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		729217921D5B7D2200325767 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		729217941D5B7D2200325767 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7292179F1D5BA51600325767 /* ImageLoaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoaderViewController.swift; sourceTree = "<group>"; };
+		729217A21D5BA5AE00325767 /* ModalDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalDemoViewController.swift; sourceTree = "<group>"; };
+		729217A51D5BA7FA00325767 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		723BC7291D4B7A96001B585F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		729217831D5B7D2200325767 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -40,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				723BC72F1D4B7A96001B585F /* GenericOperation */,
+				729217871D5B7D2200325767 /* GenericOperationExample */,
 				723BC72E1D4B7A96001B585F /* Products */,
 				723BC73F1D4B83E3001B585F /* OperationTesting.playground */,
 			);
@@ -49,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				723BC72D1D4B7A96001B585F /* GenericOperation.framework */,
+				729217861D5B7D2200325767 /* GenericOperationExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +87,7 @@
 				723BC73B1D4B7BB6001B585F /* AsynchronousOperation.swift */,
 				723BC7381D4B7ACB001B585F /* DataSessionOperation.swift */,
 				723BC7411D4B896C001B585F /* FollowupOperation.swift */,
+				729217801D5B70F200325767 /* ModalPresentationOperation.swift */,
 				723BC73D1D4B7D75001B585F /* ResultParsing.swift */,
 			);
 			path = GenericOperation;
@@ -72,6 +100,69 @@
 				723BC7311D4B7A96001B585F /* Info.plist */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		729217871D5B7D2200325767 /* GenericOperationExample */ = {
+			isa = PBXGroup;
+			children = (
+				7292179B1D5B7DB200325767 /* App Delegate */,
+				729217981D5B7D3D00325767 /* Assets */,
+				729217A41D5BA7EA00325767 /* Extensions */,
+				7292179E1D5BA4FD00325767 /* Image Loader */,
+				7292179C1D5B7DBA00325767 /* Main */,
+				729217A11D5BA54300325767 /* Modal Demo */,
+			);
+			path = GenericOperationExample;
+			sourceTree = "<group>";
+		};
+		729217981D5B7D3D00325767 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				7292178F1D5B7D2200325767 /* Assets.xcassets */,
+				729217941D5B7D2200325767 /* Info.plist */,
+				729217911D5B7D2200325767 /* LaunchScreen.storyboard */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		7292179B1D5B7DB200325767 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				729217881D5B7D2200325767 /* AppDelegate.swift */,
+			);
+			path = "App Delegate";
+			sourceTree = "<group>";
+		};
+		7292179C1D5B7DBA00325767 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7292178A1D5B7D2200325767 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		7292179E1D5BA4FD00325767 /* Image Loader */ = {
+			isa = PBXGroup;
+			children = (
+				7292179F1D5BA51600325767 /* ImageLoaderViewController.swift */,
+			);
+			path = "Image Loader";
+			sourceTree = "<group>";
+		};
+		729217A11D5BA54300325767 /* Modal Demo */ = {
+			isa = PBXGroup;
+			children = (
+				729217A21D5BA5AE00325767 /* ModalDemoViewController.swift */,
+			);
+			path = "Modal Demo";
+			sourceTree = "<group>";
+		};
+		729217A41D5BA7EA00325767 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				729217A51D5BA7FA00325767 /* UIButton+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,12 +197,31 @@
 			productReference = 723BC72D1D4B7A96001B585F /* GenericOperation.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		729217851D5B7D2200325767 /* GenericOperationExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 729217951D5B7D2200325767 /* Build configuration list for PBXNativeTarget "GenericOperationExample" */;
+			buildPhases = (
+				729217821D5B7D2200325767 /* Sources */,
+				729217831D5B7D2200325767 /* Frameworks */,
+				729217841D5B7D2200325767 /* Resources */,
+				7292179D1D5B7F4200325767 /* SwiftLint */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GenericOperationExample;
+			productName = GenericOperationExample;
+			productReference = 729217861D5B7D2200325767 /* GenericOperationExample.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		723BC7241D4B7A96001B585F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0800;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Atelier Clockwork";
 				TargetAttributes = {
@@ -122,6 +232,11 @@
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
+					729217851D5B7D2200325767 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 8NQ6VJNLCQ;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 723BC7271D4B7A96001B585F /* Build configuration list for PBXProject "GenericOperation" */;
@@ -130,6 +245,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 723BC7231D4B7A96001B585F;
 			productRefGroup = 723BC72E1D4B7A96001B585F /* Products */;
@@ -137,6 +253,7 @@
 			projectRoot = "";
 			targets = (
 				723BC72C1D4B7A96001B585F /* GenericOperation */,
+				729217851D5B7D2200325767 /* GenericOperationExample */,
 			);
 		};
 /* End PBXProject section */
@@ -149,7 +266,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		729217841D5B7D2200325767 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				729217931D5B7D2200325767 /* LaunchScreen.storyboard in Resources */,
+				729217901D5B7D2200325767 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7292179D1D5B7F4200325767 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		723BC7281D4B7A96001B585F /* Sources */ = {
@@ -159,11 +302,36 @@
 				723BC7391D4B7ACB001B585F /* DataSessionOperation.swift in Sources */,
 				723BC73E1D4B7D75001B585F /* ResultParsing.swift in Sources */,
 				723BC73C1D4B7BB6001B585F /* AsynchronousOperation.swift in Sources */,
+				729217811D5B70F200325767 /* ModalPresentationOperation.swift in Sources */,
 				723BC7421D4B896C001B585F /* FollowupOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		729217821D5B7D2200325767 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7292178B1D5B7D2200325767 /* MainViewController.swift in Sources */,
+				729217A31D5BA5AE00325767 /* ModalDemoViewController.swift in Sources */,
+				729217891D5B7D2200325767 /* AppDelegate.swift in Sources */,
+				729217A61D5BA7FA00325767 /* UIButton+Extensions.swift in Sources */,
+				729217A01D5BA51600325767 /* ImageLoaderViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		729217911D5B7D2200325767 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				729217921D5B7D2200325767 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = .;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		723BC7331D4B7A96001B585F /* Debug */ = {
@@ -300,6 +468,36 @@
 			};
 			name = Release;
 		};
+		729217961D5B7D2200325767 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEVELOPMENT_TEAM = 8NQ6VJNLCQ;
+				INFOPLIST_FILE = GenericOperationExample/Assets/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atelierclockwork.GenericOperationExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		729217971D5B7D2200325767 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEVELOPMENT_TEAM = 8NQ6VJNLCQ;
+				INFOPLIST_FILE = GenericOperationExample/Assets/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atelierclockwork.GenericOperationExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -317,6 +515,15 @@
 			buildConfigurations = (
 				723BC7361D4B7A96001B585F /* Debug */,
 				723BC7371D4B7A96001B585F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		729217951D5B7D2200325767 /* Build configuration list for PBXNativeTarget "GenericOperationExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				729217961D5B7D2200325767 /* Debug */,
+				729217971D5B7D2200325767 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

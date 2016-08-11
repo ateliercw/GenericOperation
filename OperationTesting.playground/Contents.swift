@@ -48,7 +48,7 @@ struct ImageRequest: ResultParsing {
     }
 }
 
-let imageURL = URL(string: "http://placekitten.com/200/300")!
+let imageURL = URL(string: "https://unsplash.it/600?random")!
 
 let session = URLSession(configuration: URLSessionConfiguration.default)
 
