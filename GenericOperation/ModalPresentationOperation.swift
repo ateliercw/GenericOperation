@@ -72,7 +72,7 @@ private extension ModalPresentationOperation {
     }
 
     func waitForPresentationToFinish() {
-        let wait = DispatchTime.now() + DispatchTimeInterval.milliseconds(16)
+        let wait = DispatchTime.now() + DispatchTimeInterval.microseconds(16667)
         DispatchQueue.main.asyncAfter(deadline: wait) { [weak self] in
             self?.checkForPresentation()
         }
