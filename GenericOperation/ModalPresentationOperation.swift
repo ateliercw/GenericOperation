@@ -8,9 +8,9 @@
 
 import Foundation
 
-protocol Presentable {
+protocol Presentable: AnyObject {
 
-    weak var operation: AsynchronousOperation { get, set }
+    weak var presentationOperation: AsynchronousOperation? { get set }
 
 }
 
@@ -22,7 +22,7 @@ protocol ModalPresentationOperationDelegate: AnyObject {
 
 }
 
-class ModalPresentationOperation<Presented: UIViewController, Presentable>: AsynchronousOperation {
+class ModalPresentationOperation<Presented: UIViewController>: AsynchronousOperation where Presented: Presentable {
 
     weak var presentationDelegate: ModalPresentationOperationDelegate?
     var viewControllerToPresent: Presented
@@ -30,7 +30,8 @@ class ModalPresentationOperation<Presented: UIViewController, Presentable>: Asyn
     init(viewControllerToPresent: Presented, delegate: ModalPresentationOperationDelegate? = nil) {
         self.viewControllerToPresent = viewControllerToPresent
         self.presentationDelegate = delegate
-        viewControllerToPresent.operation = self
+        super.init()
+        viewControllerToPresent.presentationOperation = self
     }
 
     override func main() {

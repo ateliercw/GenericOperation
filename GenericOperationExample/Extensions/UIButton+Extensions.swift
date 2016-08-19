@@ -11,7 +11,7 @@ import UIKit
 extension UIButton {
     convenience init(title: String, target: NSObjectProtocol? = nil, action: Selector? = nil) {
         self.init(type: .system)
-        titleLabel?.font = UIFont.preferredFont(forTextStyle: UIFontTextStyleBody)
+        titleLabel?.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)
         setTitle(title, for: .normal)
         if let target = target, let action = action {
             addTarget(target, action: action, for: .touchUpInside)

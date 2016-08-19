@@ -55,10 +55,6 @@ final class ImageLoaderView: UIView {
         case none
     }
 
-}
-
-private extension ImageLoaderView {
-
     private func prepareLayout() {
         let stackView = UIStackView(arrangedSubviews: [reloadButton, imageView, statusLabel])
         stackView.axis = .vertical

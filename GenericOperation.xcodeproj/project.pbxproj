@@ -12,6 +12,8 @@
 		723BC73C1D4B7BB6001B585F /* AsynchronousOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723BC73B1D4B7BB6001B585F /* AsynchronousOperation.swift */; };
 		723BC73E1D4B7D75001B585F /* ResultParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723BC73D1D4B7D75001B585F /* ResultParsing.swift */; };
 		723BC7421D4B896C001B585F /* FollowupOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723BC7411D4B896C001B585F /* FollowupOperation.swift */; };
+		72608A2A1D67460F001B2314 /* GenericOperation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 723BC72D1D4B7A96001B585F /* GenericOperation.framework */; };
+		72608A2B1D67460F001B2314 /* GenericOperation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 723BC72D1D4B7A96001B585F /* GenericOperation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		729217811D5B70F200325767 /* ModalPresentationOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729217801D5B70F200325767 /* ModalPresentationOperation.swift */; };
 		729217891D5B7D2200325767 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729217881D5B7D2200325767 /* AppDelegate.swift */; };
 		7292178B1D5B7D2200325767 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7292178A1D5B7D2200325767 /* MainViewController.swift */; };
@@ -23,6 +25,30 @@
 		729217A81D5CBFF200325767 /* ImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729217A71D5CBFF200325767 /* ImageRequest.swift */; };
 		729217AA1D5CEE2F00325767 /* ImageLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729217A91D5CEE2F00325767 /* ImageLoaderView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		72608A2C1D67460F001B2314 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 723BC7241D4B7A96001B585F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 723BC72C1D4B7A96001B585F;
+			remoteInfo = GenericOperation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		72608A2E1D67460F001B2314 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				72608A2B1D67460F001B2314 /* GenericOperation.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		723BC72D1D4B7A96001B585F /* GenericOperation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GenericOperation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72608A2A1D67460F001B2314 /* GenericOperation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,10 +236,12 @@
 				729217831D5B7D2200325767 /* Frameworks */,
 				729217841D5B7D2200325767 /* Resources */,
 				7292179D1D5B7F4200325767 /* SwiftLint */,
+				72608A2E1D67460F001B2314 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				72608A2D1D67460F001B2314 /* PBXTargetDependency */,
 			);
 			name = GenericOperationExample;
 			productName = GenericOperationExample;
@@ -326,6 +355,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		72608A2D1D67460F001B2314 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 723BC72C1D4B7A96001B585F /* GenericOperation */;
+			targetProxy = 72608A2C1D67460F001B2314 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		729217911D5B7D2200325767 /* LaunchScreen.storyboard */ = {
@@ -441,6 +478,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8NQ6VJNLCQ;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -461,6 +499,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8NQ6VJNLCQ;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -477,6 +516,7 @@
 		729217961D5B7D2200325767 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
@@ -492,6 +532,7 @@
 		729217971D5B7D2200325767 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;

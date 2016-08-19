@@ -14,7 +14,7 @@ public class AsynchronousOperation: Operation {
     public enum State {
         case Ready, Executing, Finished
 
-        private var keyPath: String {
+        fileprivate var keyPath: String {
             let keyPath: String
             switch self {
             case .Ready: keyPath = #keyPath(Operation.isReady)

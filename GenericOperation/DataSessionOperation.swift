@@ -38,7 +38,7 @@ public class DataSessionOperation<Query: ResultParsing>: AsynchronousOperation {
         removeObserver(self, forKeyPath: #keyPath(dataTask.state))
     }
 
-    public override func observeValue(forKeyPath keyPath: String?, of object: AnyObject?, change: [NSKeyValueChangeKey : AnyObject]?, context: UnsafeMutablePointer<Void>?) {
+    public override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if (object as? DataSessionOperation) == self && keyPath == #keyPath(dataTask.state) {
             if let newValue = change?[.newKey] as? URLSessionTask.State {
                 state = AsynchronousOperation.State(dataTaskState: newValue)
@@ -64,12 +64,7 @@ public class DataSessionOperation<Query: ResultParsing>: AsynchronousOperation {
         return super.isFinished
     }
 
-}
-
-
-private extension DataSessionOperation {
-
-    func taskCompletion(data: Data?, response: URLResponse?, error: Error?) {
+    private func taskCompletion(data: Data?, response: URLResponse?, error: Error?) {
         defer {
             state = .Finished
         }
