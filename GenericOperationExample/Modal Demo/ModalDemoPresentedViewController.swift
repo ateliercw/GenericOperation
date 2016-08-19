@@ -24,10 +24,12 @@ class ModalDemoPresentedViewController: UIViewController, Presentable {
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         presentationOperation?.state = .Executing
     }
 
     override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
         presentationOperation?.state = .Finished
     }
 

@@ -41,14 +41,7 @@ public class ModalPresentationOperation<Presented: UIViewController>: Asynchrono
     }
 
     override public func main() {
-        guard let presenter = presentationDelegate?.presentationSource,
-            let animated = presentationDelegate?.animated else {
-                cancel()
-                return
-        }
-        presenter.present(viewControllerToPresent,
-                          animated: animated,
-                          completion: presentationDelegate?.completion)
+        checkForPresentation()
     }
 
     override public func cancel() {
@@ -79,8 +72,10 @@ private extension ModalPresentationOperation {
     }
 
     func waitForPresentationToFinish() {
-        let wait = DispatchTime.now() + Double((1.0 / 60.0) * Double(NSEC_PER_SEC))
-        DispatchQueue.main.asyncAfter(deadline: wait, execute: checkForPresentation)
+        let wait = DispatchTime.now() + DispatchTimeInterval.milliseconds(16)
+        DispatchQueue.main.asyncAfter(deadline: wait) { [weak self] in
+            self?.checkForPresentation()
+        }
     }
 
     func finishPresentation() {

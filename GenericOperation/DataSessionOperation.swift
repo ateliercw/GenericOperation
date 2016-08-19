@@ -60,10 +60,6 @@ public class DataSessionOperation<Query: ResultParsing>: AsynchronousOperation {
         dataTask?.cancel()
     }
 
-    override public var isFinished: Bool {
-        return super.isFinished
-    }
-
     private func taskCompletion(data: Data?, response: URLResponse?, error: Error?) {
         defer {
             state = .Finished
