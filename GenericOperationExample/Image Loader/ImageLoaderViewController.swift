@@ -12,10 +12,12 @@ import GenericOperation
 final class ImageLoaderViewController: UIViewController {
 
     let session = URLSession(configuration: URLSessionConfiguration.default)
+
     let imageLoadingQueue: OperationQueue = { imageLoadingQueue in
         imageLoadingQueue.qualityOfService = .userInitiated
         return imageLoadingQueue
     }(OperationQueue())
+
     var updateOperation: Operation? {
         willSet {
             updateOperation?.cancel()

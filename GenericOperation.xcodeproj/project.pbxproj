@@ -14,6 +14,9 @@
 		723BC7421D4B896C001B585F /* FollowupOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723BC7411D4B896C001B585F /* FollowupOperation.swift */; };
 		72608A2A1D67460F001B2314 /* GenericOperation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 723BC72D1D4B7A96001B585F /* GenericOperation.framework */; };
 		72608A2B1D67460F001B2314 /* GenericOperation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 723BC72D1D4B7A96001B585F /* GenericOperation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		72608A301D6751E9001B2314 /* ModalDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72608A2F1D6751E9001B2314 /* ModalDemoView.swift */; };
+		72608A321D6755A8001B2314 /* ModalDemoPresentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72608A311D6755A8001B2314 /* ModalDemoPresentedViewController.swift */; };
+		72608A341D6755B5001B2314 /* ModalDemoPresentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72608A331D6755B5001B2314 /* ModalDemoPresentedView.swift */; };
 		729217811D5B70F200325767 /* ModalPresentationOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729217801D5B70F200325767 /* ModalPresentationOperation.swift */; };
 		729217891D5B7D2200325767 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729217881D5B7D2200325767 /* AppDelegate.swift */; };
 		7292178B1D5B7D2200325767 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7292178A1D5B7D2200325767 /* MainViewController.swift */; };
@@ -58,6 +61,9 @@
 		723BC73B1D4B7BB6001B585F /* AsynchronousOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsynchronousOperation.swift; sourceTree = "<group>"; };
 		723BC73D1D4B7D75001B585F /* ResultParsing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultParsing.swift; sourceTree = "<group>"; };
 		723BC7411D4B896C001B585F /* FollowupOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowupOperation.swift; sourceTree = "<group>"; };
+		72608A2F1D6751E9001B2314 /* ModalDemoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalDemoView.swift; sourceTree = "<group>"; };
+		72608A311D6755A8001B2314 /* ModalDemoPresentedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalDemoPresentedViewController.swift; sourceTree = "<group>"; };
+		72608A331D6755B5001B2314 /* ModalDemoPresentedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalDemoPresentedView.swift; sourceTree = "<group>"; };
 		729217801D5B70F200325767 /* ModalPresentationOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalPresentationOperation.swift; sourceTree = "<group>"; };
 		729217861D5B7D2200325767 /* GenericOperationExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GenericOperationExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		729217881D5B7D2200325767 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -184,6 +190,9 @@
 			isa = PBXGroup;
 			children = (
 				729217A21D5BA5AE00325767 /* ModalDemoViewController.swift */,
+				72608A2F1D6751E9001B2314 /* ModalDemoView.swift */,
+				72608A311D6755A8001B2314 /* ModalDemoPresentedViewController.swift */,
+				72608A331D6755B5001B2314 /* ModalDemoPresentedView.swift */,
 			);
 			path = "Modal Demo";
 			sourceTree = "<group>";
@@ -347,8 +356,11 @@
 				7292178B1D5B7D2200325767 /* MainViewController.swift in Sources */,
 				729217A81D5CBFF200325767 /* ImageRequest.swift in Sources */,
 				729217AA1D5CEE2F00325767 /* ImageLoaderView.swift in Sources */,
+				72608A301D6751E9001B2314 /* ModalDemoView.swift in Sources */,
 				729217A31D5BA5AE00325767 /* ModalDemoViewController.swift in Sources */,
 				729217891D5B7D2200325767 /* AppDelegate.swift in Sources */,
+				72608A341D6755B5001B2314 /* ModalDemoPresentedView.swift in Sources */,
+				72608A321D6755A8001B2314 /* ModalDemoPresentedViewController.swift in Sources */,
 				729217A61D5BA7FA00325767 /* UIButton+Extensions.swift in Sources */,
 				729217A01D5BA51600325767 /* ImageLoaderViewController.swift in Sources */,
 			);
