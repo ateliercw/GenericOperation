@@ -36,7 +36,7 @@ struct ImageRequest: ResultParsing {
         self.urlSession = urlSession
     }
 
-    func parseResult(data: Data?, response: URLResponse?, error: Error?) -> Result<ParsedResult> {
+    func parseResult(_ data: Data?, response: URLResponse?, error: Error?) -> Result<ParsedResult> {
         let result: Result<ParsedResult>
         if let error = error {
             result = .error(error)

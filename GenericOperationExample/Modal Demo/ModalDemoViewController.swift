@@ -28,9 +28,9 @@ class ModalDemoViewController: UIViewController {
 
     override func loadView() {
         view = ModalDemoView()
-        demoView.presentOnceButton.addTarget(self, action: #selector(presentSingleModal(target:)), for: .touchUpInside)
-        demoView.presentTwiceButton.addTarget(self, action: #selector(presentTwoModals(target:)), for: .touchUpInside)
-        demoView.presentTenTimesButton.addTarget(self, action: #selector(presentThreeModals(target:)), for: .touchUpInside)
+        demoView.presentOnceButton.addTarget(self, action: #selector(presentSingleModal(_:)), for: .touchUpInside)
+        demoView.presentTwiceButton.addTarget(self, action: #selector(presentTwoModals(_:)), for: .touchUpInside)
+        demoView.presentTenTimesButton.addTarget(self, action: #selector(presentThreeModals(_:)), for: .touchUpInside)
         edgesForExtendedLayout = []
     }
 
@@ -53,19 +53,19 @@ extension ModalDemoViewController: ModalPresentationOperationDelegate {
 
 private extension ModalDemoViewController {
 
-    @objc func presentSingleModal(target: UIButton) {
-        presentModals(count: 1)
+    @objc func presentSingleModal(_ target: UIButton) {
+        presentModals(1)
     }
 
-    @objc func presentTwoModals(target: UIButton) {
-        presentModals(count: 2)
+    @objc func presentTwoModals(_ target: UIButton) {
+        presentModals(2)
     }
 
-    @objc func presentThreeModals(target: UIButton) {
-        presentModals(count: 10)
+    @objc func presentThreeModals(_ target: UIButton) {
+        presentModals(10)
     }
 
-    func presentModals(count: Int) {
+    func presentModals(_ count: Int) {
         modalOperations = Array(0..<count).map { _ in
             return ModalPresentationOperation(viewControllerToPresent: ModalDemoPresentedViewController(), delegate: self)
         }

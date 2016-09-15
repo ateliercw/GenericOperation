@@ -11,8 +11,8 @@ import UIKit
 final class ImageLoaderView: UIView {
 
     let reloadButton = UIButton(title: NSLocalizedString("Reload Image", comment: "Button title for reloading the random image"))
-    private let imageView = UIImageView()
-    private let statusLabel = UILabel()
+    fileprivate let imageView = UIImageView()
+    fileprivate let statusLabel = UILabel()
     let activityIndicator: UIActivityIndicatorView = { activityIndicator in
         activityIndicator.hidesWhenStopped = true
         return activityIndicator
@@ -55,7 +55,7 @@ final class ImageLoaderView: UIView {
         case none
     }
 
-    private func prepareLayout() {
+    fileprivate func prepareLayout() {
         let stackView = UIStackView(arrangedSubviews: [reloadButton, imageView, statusLabel])
         stackView.axis = .vertical
         stackView.alignment = .center

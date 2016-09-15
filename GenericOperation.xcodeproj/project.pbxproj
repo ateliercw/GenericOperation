@@ -277,6 +277,7 @@
 					729217851D5B7D2200325767 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 8NQ6VJNLCQ;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};

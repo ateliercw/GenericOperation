@@ -28,7 +28,7 @@ public protocol AnyModalPresentationOperation {
 
 }
 
-public class ModalPresentationOperation<Presented: UIViewController>: AsynchronousOperation, AnyModalPresentationOperation where Presented: Presentable {
+open class ModalPresentationOperation<Presented: UIViewController>: AsynchronousOperation, AnyModalPresentationOperation where Presented: Presentable {
 
     public weak var presentationDelegate: ModalPresentationOperationDelegate?
     public var viewControllerToPresent: Presented
@@ -40,11 +40,11 @@ public class ModalPresentationOperation<Presented: UIViewController>: Asynchrono
         viewControllerToPresent.presentationOperation = self
     }
 
-    override public func main() {
+    override open func main() {
         checkForPresentation()
     }
 
-    override public func cancel() {
+    override open func cancel() {
         defer {
             super.cancel()
         }

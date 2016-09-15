@@ -25,7 +25,7 @@ public enum Result<T> {
 public protocol ResultParsing {
     associatedtype ParsedResult
 
-    func parseResult(data: Data?, response: URLResponse?, error: Error?) -> Result<ParsedResult>
+    func parseResult(_ data: Data?, response: URLResponse?, error: Error?) -> Result<ParsedResult>
 
     var url: URL { get }
     var urlSession: URLSession { get }
