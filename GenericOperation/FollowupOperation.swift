@@ -8,24 +8,24 @@
 
 import Foundation
 
-public class FollowUpOperation<ParentOperation: Operation>: AsynchronousOperation {
+open class FollowUpOperation<ParentOperation: Operation>: AsynchronousOperation {
 
     public typealias FollowUpAction = (ParentOperation) -> ()
-    public let parentOperation: ParentOperation
-    public let followUpAction: FollowUpAction
+    open let parentOperation: ParentOperation
+    open let followUpAction: FollowUpAction
 
-    public init(parentOperation: ParentOperation, followUpAction: FollowUpAction) {
+    public init(parentOperation: ParentOperation, followUpAction: @escaping FollowUpAction) {
         self.parentOperation = parentOperation
         self.followUpAction = followUpAction
         super.init()
         addDependency(parentOperation)
     }
 
-    public override func main() {
+    open override func main() {
         defer {
-            state = .Finished
+            state = .finished
         }
-        if !isCancelled {
+        if !isCancelled && !parentOperation.isCancelled {
             followUpAction(parentOperation)
         }
     }

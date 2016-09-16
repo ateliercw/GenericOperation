@@ -9,23 +9,23 @@
 import Foundation
 
 // Adapted from code in https://github.com/shrutic/NSOperation-Swift
-public class AsynchronousOperation: Operation {
+open class AsynchronousOperation: Operation {
 
     public enum State {
-        case Ready, Executing, Finished
+        case ready, executing, finished
 
-        private var keyPath: String {
+        fileprivate var keyPath: String {
             let keyPath: String
             switch self {
-            case .Ready: keyPath = #keyPath(Operation.isReady)
-            case .Executing: keyPath = #keyPath(Operation.isExecuting)
-            case .Finished: keyPath = #keyPath(Operation.isFinished)
+            case .ready: keyPath = #keyPath(Operation.isReady)
+            case .executing: keyPath = #keyPath(Operation.isExecuting)
+            case .finished: keyPath = #keyPath(Operation.isFinished)
             }
             return keyPath
         }
     }
 
-    public var state = State.Ready {
+    open var state = State.ready {
         willSet {
             willChangeValue(forKey: newValue.keyPath)
             willChangeValue(forKey: state.keyPath)
@@ -37,29 +37,29 @@ public class AsynchronousOperation: Operation {
         }
     }
 
-    override public var isReady: Bool {
-        return super.isReady && self.state == .Ready
+    override open var isReady: Bool {
+        return super.isReady && (self.state == .ready)
     }
 
-    override public var isExecuting: Bool {
-        return self.state == .Executing
+    override open var isExecuting: Bool {
+        return self.state == .executing
     }
 
-    override public var isFinished: Bool {
-        return self.state == .Finished
+    override open var isFinished: Bool {
+        return self.state == .finished
     }
 
-    override public var isAsynchronous: Bool {
+    override open var isAsynchronous: Bool {
         return true
     }
 
-    override public func start() {
+    override open func start() {
         if self.isCancelled {
-            state = .Finished
+            state = .finished
         }
         else {
             self.main() // This should set self.state = .Finished when done with execution
-            state = .Executing
+            state = .executing
         }
     }
 }

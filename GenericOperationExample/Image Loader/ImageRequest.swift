@@ -1,10 +1,13 @@
-//: Playground - noun: a place where people can play
+//
+//  ImageRequest.swift
+//  GenericOperation
+//
+//  Created by Michael Skiba on 8/11/16.
+//  Copyright © 2016 Atelier Clockwork. All rights reserved.
+//
 
 import UIKit
 import GenericOperation
-import PlaygroundSupport
-
-PlaygroundPage.current.needsIndefiniteExecution = true
 
 struct ImageRequest: ResultParsing {
     struct Return {
@@ -33,7 +36,7 @@ struct ImageRequest: ResultParsing {
         self.urlSession = urlSession
     }
 
-    func parseResult(data: Data?, response: URLResponse?, error: NSError?) -> Result<ParsedResult> {
+    func parseResult(_ data: Data?, response: URLResponse?, error: Error?) -> Result<ParsedResult> {
         let result: Result<ParsedResult>
         if let error = error {
             result = .error(error)
@@ -47,26 +50,3 @@ struct ImageRequest: ResultParsing {
         return result
     }
 }
-
-let imageURL = URL(string: "http://placekitten.com/200/300")!
-
-let session = URLSession(configuration: URLSessionConfiguration.default)
-
-let imageLoader = ImageRequest.init(url: imageURL, urlSession: session)
-
-let imageOperation = DataSessionOperation(query: imageLoader)
-
-let followUp = FollowUpOperation(parentOperation: imageOperation) { parent in
-    guard let result = parent.result else {
-        return
-    }
-    switch result {
-    case .error:
-        break
-    case .success(let image):
-        image
-    }
-}
-
-OperationQueue.main.addOperation(imageOperation)
-OperationQueue.main.addOperation(followUp)

@@ -12,20 +12,20 @@ private extension AsynchronousOperation.State {
     init(dataTaskState: URLSessionTask.State) {
         switch dataTaskState {
         case .canceling, .completed:
-            self = .Finished
+            self = .finished
         case .running:
-            self = .Executing
+            self = .executing
         case .suspended:
-            self = .Ready
+            self = .ready
         }
     }
 }
 
-public class DataSessionOperation<Query: ResultParsing>: AsynchronousOperation {
+open class DataSessionOperation<Query: ResultParsing>: AsynchronousOperation {
 
-    private(set) public var result: Result<Query.ParsedResult>?
-    @objc private var dataTask: URLSessionDataTask?
-    private let query: Query
+    fileprivate(set) open var result: Result<Query.ParsedResult>?
+    @objc fileprivate var dataTask: URLSessionDataTask?
+    fileprivate let query: Query
 
     public init(query: Query) {
         self.query = query
@@ -38,7 +38,7 @@ public class DataSessionOperation<Query: ResultParsing>: AsynchronousOperation {
         removeObserver(self, forKeyPath: #keyPath(dataTask.state))
     }
 
-    public override func observeValue(forKeyPath keyPath: String?, of object: AnyObject?, change: [NSKeyValueChangeKey : AnyObject]?, context: UnsafeMutablePointer<Void>?) {
+    open override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if (object as? DataSessionOperation) == self && keyPath == #keyPath(dataTask.state) {
             if let newValue = change?[.newKey] as? URLSessionTask.State {
                 state = AsynchronousOperation.State(dataTaskState: newValue)
@@ -49,32 +49,23 @@ public class DataSessionOperation<Query: ResultParsing>: AsynchronousOperation {
         }
     }
 
-    public override func main() {
+    open override func main() {
         dataTask?.resume()
     }
 
-    public override func cancel() {
+    open override func cancel() {
         defer {
             super.cancel()
         }
         dataTask?.cancel()
     }
 
-    override public var isFinished: Bool {
-        return super.isFinished
-    }
-
-}
-
-
-private extension DataSessionOperation {
-
-    func taskCompletion(data: Data?, response: URLResponse?, error: Error?) {
+    fileprivate func taskCompletion(_ data: Data?, response: URLResponse?, error: Error?) {
         defer {
-            state = .Finished
+            state = .finished
         }
         if !isCancelled {
-            result = query.parseResult(data: data, response: response, error: error)
+            result = query.parseResult(data, response: response, error: error)
             dataTask?.cancel()
         }
     }

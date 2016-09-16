@@ -9,10 +9,20 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>GenericOperationExample.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>723BC72C1D4B7A96001B585F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>729217851D5B7D2200325767</key>
 		<dict>
 			<key>primary</key>
 			<true/>
